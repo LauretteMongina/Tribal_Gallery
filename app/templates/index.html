@@ -8,7 +8,7 @@
 <div class="banner" style="color:black;">
     <div class="cover">
         <div class="container image">
-            <h2 id="category" style="color: black;">A global home,food and lifestyle company. Unique, made by hand,furniture,textiles,art and food from across the world.
+            <h2 id="category" style="color: black;text-align: center;">A global home food and lifestyle company. <br>Unique, made by hand,furniture,textiles,art and food from across the world.
             </h2>
             <form class="form" role="search" action="{% url 'search' %}">
 
@@ -29,9 +29,9 @@
     </div>
     </div>
 <div class="photo-gallery">
-    <div class="container-fluid">
+    <div class="container-fluid wrap">
       <div class="px-lg-5">
-          
+        <div class="row">
           <div class="row" style="display: flex;flex-wrap: wrap;">
             {% for image in images %}
             <div class="col-xl-3 col-lg-4 col-lg-12 mb-4" style="display: flex;flex-wrap: wrap;">
@@ -54,13 +54,14 @@
                     </div>
                   </div>
                   <div class="d-flex align-items-center justify-content-between rounded-pill bg-warning px-3 py-2 mt-4">
-                    <a data-bs-toggle="modal" data-bs-target="#modalDisplayImageDetails{{image.id}}"
+                    <a data-toggle="modal" data-target="#modalDisplayImageDetails{{image.id}}"
                       class="text-dark modal-click">
                       <p class="small mb-0">
                         View More
                         <i class="fa fa-arrow-right"></i>
                       </p>
                     </a>
+                    </div>
                     <div class="badge badge-danger px-3 rounded-pill font-weight-normal text-dark">
                       {{image.created_at|date}}
                     </div>
@@ -75,7 +76,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title about" id="modalDisplayImageDetailsLabel">Tribal Gallery</h5>
+                    <h5 class="modal-title about" id="modalDisplayImageDetailsLabel" style="color: red;">Tribal Gallery</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -83,12 +84,12 @@
                 <div class="modal-body reg">
                     <div class="row">
                         <div class="col-md-9 col-lg-9">
-                            <img src="{{ image.image.url }}" alt="" class="img-fluid">
+                            <img src="{{ image.image.url }}" alt="" height="300px" width="300px" class="img-fluid">
 
                         </div>
                         <div class="col-md-3">
                             <h4 class="desc">Location</h4>
-                            <p>{{image.location.}}</p>
+                            <p>{{image.location}}</p>
                             <h4 class="desc">Category</h4>
                             <p>{{image.category}}</p>
                         </div>
@@ -100,8 +101,8 @@
                 </div>
                 <div class="modal-footer reg">
                     <input type="text" value="{{ image.image.url }}" id="links">
-                    <button class="btn btn-success btn-sm" onclick="copyLink()">Copy text</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button class="btn btn-success btn-sm" onclick="copyLink()" style="background-color: red;">Copy text</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color: red;">Close</button>
                 </div>
             </div>
         </div>
