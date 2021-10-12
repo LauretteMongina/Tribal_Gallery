@@ -8,6 +8,12 @@ This  is a django application that allows users to display images,view image det
 ## Live Link
 [View Site](https://tribalgallery.herokuapp.com/)
 
+## Application Images
+
+<img src="1.png">
+<img src="6.png">
+<img src="3.png">
+<img src="4.png">
 
 ## User Stories
 
