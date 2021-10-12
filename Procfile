@@ -1,1 +1,1 @@
-web: gunicorn tribalgalery.wsgi --log-file -
+web: gunicorn tribalgallery.wsgi --log-file -
