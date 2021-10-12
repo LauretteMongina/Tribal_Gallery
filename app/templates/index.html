@@ -73,12 +73,12 @@
             </div>
     <!-- Image details modal -->
     {% for image in images %}
-    <div class="modal fade " id="image{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
-        aria-hidden="true">
+    <div class="modal fade " id="modalDisplayImageDetails{{image.id}}" tabindex="-1" 
+    role="dialog" aria-labelledby="modalDisplayImageDetailsLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title about">Tribal Gallery</h5>
+                    <h5 class="modal-title about" id="modalDisplayImageDetailsLabel">Tribal Gallery</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -91,9 +91,9 @@
                         </div>
                         <div class="col-md-3">
                             <h4 class="desc">Location</h4>
-                            <p>{{image.location.name}}</p>
+                            <p>{{image.location.}}</p>
                             <h4 class="desc">Category</h4>
-                            <p>{{image.category.name}}</p>
+                            <p>{{image.category}}</p>
                         </div>
                         <div>
                             <h2 class="desc">{{image.name}}</h2>
