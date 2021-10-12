@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="photo-gallery">
+    <div class="container-fluid">
+      <div class="px-lg-5">
+        <!-- display default password and username -->
+          
+          <div class="row">
+            {% for image in images %}
+            <!-- Gallery Photo item start -->
+            <div class="col-xl-3 col-lg-4 col-md-12 mb-4">
+              <div class="bg-white rounded shadow-sm"><img src="{{ image.image.url }}" height="300px" width="300px" alt=""
+                  class="img-fluid card-img-top">
+                <div class="p-4">
+                  <h5 class="headings text-center"> <a data-bs-toggle="modal"
+                      data-bs-target="#modalDisplayImageDetails{{image.id}}"
+                      class="text-dark text-capitalize modal-click">{{ image.name }}</a></h5>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <small class="text-muted">
+                        <span class="badge rounded-pill bg-info text-white text-capitalize">{{ image.category }}</span>
+                      </small>
+                    </div>
+                    <div>
+                      <small class="text-muted">
+                        <span class="badge rounded-pill bg text-white text-capitalize" style="background: rgb(196, 129, 43);">{{ image.location }}</span>
+                      </small>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between rounded-pill bg-warning px-3 py-2 mt-4">
+                    <a data-bs-toggle="modal" data-bs-target="#modalDisplayImageDetails{{image.id}}"
+                      class="text-dark modal-click">
+                      <p class="small mb-0">
+                        View More
+                        <i class="fa fa-arrow-right"></i>
+                      </p>
+                    </a>
+                    <div class="badge badge-danger px-3 rounded-pill font-weight-normal text-dark">
+                      {{image.created_at|date}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    <!-- Image details modal -->
+    {% for image in images %}
+    <div class="modal fade " id="image{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title about">Tribal Gallery</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body reg">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-9">
+                            <img src="{{ image.image.url }}" alt="" class="img-fluid">
+
+                        </div>
+                        <div class="col-md-3">
+                            <h4 class="desc">Location</h4>
+                            <p>{{image.Location.name}}</p>
+                            <h4 class="desc">Category</h4>
+                            <p>{{image.Category.name}}</p>
+                        </div>
+                        <div>
+                            <h2 class="desc">{{image.name}}</h2>
+                            <p class="desc">{{image.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer reg">
+                    <input type="text" value="{{ image.Image.url }}" id="links">
+                    <button class="btn btn-success btn-sm" onclick="copyLink()">Copy text</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endfor %}
+{% endblock %}
