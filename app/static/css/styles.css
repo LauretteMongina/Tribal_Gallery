@@ -20,9 +20,7 @@
   div#navbarNav.collapse.navbar-collapse {
       width: 100%;
   }
-  #navMain{
-      /* background-color: rgb(196, 129, 43); */
-  }
+ 
 
 
   ul.navbar-nav {
@@ -134,14 +132,7 @@
   justify-content: center;
 }
 
-.social-buttons {
-  display: flex;
-  justify-content: center;
-}
 
-.social-buttons a:hover {
-  color: #d18a19;
-}
 
 .abt {
   margin: 5px 50px;
@@ -244,16 +235,7 @@ div.container.imageloc {
   -moz-background-size: cover;
   min-height: 300px;
 }
-.banner-2 {
-  background: url(../images/image2.jpeg) no-repeat 0px 0px;
-  background-size: cover;
-  background-position: center;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -ms-background-size: cover;
-  -moz-background-size: cover;
-  min-height: 300px;
-}
+
 .banner-3 {
   background-size: cover;
   background-position: center;

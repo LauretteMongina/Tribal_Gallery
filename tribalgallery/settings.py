@@ -35,7 +35,7 @@ SECRET_KEY = 'django-insecure-7+^0^ac1+19gym@gf2bu2s_&8=f2q4wtcpq)vr0m3fb#2*!0b-
 
 
 cloudinary.config(
-    cloud_name=config('CLOUDINARY_NAME'),
+    cloud_name=config('CLOUD_NAME'),
     api_key=config('API_KEY'),
     api_secret=config('API_SECRET'),
     secure=True

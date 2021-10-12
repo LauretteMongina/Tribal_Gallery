@@ -24,19 +24,18 @@
                 <small>Trending searches: food,interior,outside,lifestyle,food,furniture</small>
 
             </form>
-            <p class="text-dark" style="color: black;font-weight: bold;">"Our hearts communicate in art” </p>
+            <p class="text-dark" style="color: black;font-weight: bold;margin-bottom: 5%;">"Our hearts communicate in art” </p>
         </div>
     </div>
-</div>
+    </div>
 <div class="photo-gallery">
     <div class="container-fluid">
-      <div class="px-lg-5">
-        <!-- display default password and username -->
+      <div class="px-lg-3">
           
-          <div class="row">
+          <div class="row" style="display: flex;">
             {% for image in images %}
             <!-- Gallery Photo item start -->
-            <div class="col-xl-3 col-lg-4 col-md-12 mb-4">
+            <div class="col-l-3 col-md-4 col-lg-12 mb-4">
               <div class="bg-white rounded shadow-sm"><img src="{{ image.image.url }}" height="300px" width="300px" alt=""
                   class="img-fluid card-img-top">
                 <div class="p-4">
@@ -70,6 +69,9 @@
                 </div>
               </div>
             </div>
+            </div>
+            </div>
+            </div>
     <!-- Image details modal -->
     {% for image in images %}
     <div class="modal fade " id="image{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
@@ -90,9 +92,9 @@
                         </div>
                         <div class="col-md-3">
                             <h4 class="desc">Location</h4>
-                            <p>{{image.Location.name}}</p>
+                            <p>{{image.location.name}}</p>
                             <h4 class="desc">Category</h4>
-                            <p>{{image.Category.name}}</p>
+                            <p>{{image.category.name}}</p>
                         </div>
                         <div>
                             <h2 class="desc">{{image.name}}</h2>
@@ -101,7 +103,7 @@
                     </div>
                 </div>
                 <div class="modal-footer reg">
-                    <input type="text" value="{{ image.Image.url }}" id="links">
+                    <input type="text" value="{{ image.image.url }}" id="links">
                     <button class="btn btn-success btn-sm" onclick="copyLink()">Copy text</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
@@ -112,8 +114,7 @@
     {% endfor %}
 </div>
 </div>
-</div>
-</div>
-</div>
+
+
 {% endfor %}
 {% endblock %}
