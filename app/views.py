@@ -13,7 +13,7 @@ def index(request):
 
 def search(request):
     title = 'Search'
-    # categories = Category.objects.all()
+    categories = Category.objects.all()
     # locations = Location.objects.all()
     if 'category' in request.GET and request.GET['category']:
         search_term = request.GET.get('category').lower()
@@ -21,7 +21,7 @@ def search(request):
         message = f"{search_term}"
         locations = Location.objects.all()
 
-        return render(request, 'search.html',{'title':title,'images': found_results, 'message': message, "locations":locations})
+        return render(request, 'search.html',{'message': message,'images': found_results, "locations":locations})
     else:
         message = 'You havent searched yet'
         return render(request, 'search.html',{"message": message})
