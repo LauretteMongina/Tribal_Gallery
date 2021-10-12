@@ -100,11 +100,7 @@
 
 }
 
-.nav-side h4 {
-  color: #d18a19;
-  padding: 0px 0px 0px 20px;
-  font-size: 20px;
-}
+
 
 .nav-side a:hover {
   color: #d18a19;
@@ -138,12 +134,16 @@
 
 
 .abt {
-  margin: 5px 50px;
+  
   text-align: center;
+  margin-right: 50%;
 }
-
+.abt{
+  color: white;
+}
 .text-muted.abt {
   font-size: 15px;
+  color: white;
 }
 
 /* End of Navbar Styles */
@@ -207,17 +207,12 @@ div.container.imageloc {
 }
 
 .banner {
-  background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -ms-background-size: cover;
-  -moz-background-size: cover;
-  min-height: 400px;
+  max-height: 230px;
 
 }
 
 .cover {
-  min-height: 450px;
+  max-height: 100px;
   width: inherit;
   /* background: rgba(0, 0, 0, 0.8) */
 }
@@ -229,23 +224,12 @@ div.container.imageloc {
 }
 
 .banner-1 {
-  background: url(../images/image1.jpeg) no-repeat 0px 0px;
-  background-size: cover;
-  background-position: center;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -ms-background-size: cover;
-  -moz-background-size: cover;
+  
   min-height: 300px;
 }
 
 .banner-3 {
-  background-size: cover;
-  background-position: center;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -ms-background-size: cover;
-  -moz-background-size: cover;
+
   min-height: 300px;
 }
 
@@ -254,7 +238,6 @@ div.container.imageloc {
   color: #fff;
   font-weight: 600;
   padding: 0.8em 2em;
-  background: #d18a19;
 }
 
 .banner a:hover {
@@ -285,19 +268,14 @@ div.container.imageloc {
 
 
 /* Image Gallery Section */
-.oops {
-  text-align: center;
-  width: 100%;
-}
+
 
 div.col-xs-6.col-sm-6.col-md-4.col-lg-3 {
   padding: 0px;
   padding-bottom: 10px;
 }
 
-.wrap {
-  margin-top: 3em;
-}
+
 
 .image {
   width: 50%;
@@ -311,112 +289,25 @@ div.col-xs-6.col-sm-6.col-md-4.col-lg-3 {
 
 }
 
-.hovereffect {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
+.desc{
+  color:white;
 }
-
-/* .hovereffect .overlay {
-  position: absolute;
-  overflow: hidden;
-  width: 80%;
-  height: 80%;
-  left: 10%;
-  top: 10%;
-  border-bottom: 1px solid #FFF;
-  border-top: 1px solid #FFF;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: scale(0, 1);
-  -ms-transform: scale(0, 1);
-  transform: scale(0, 1);
-} */
-
-.hovereffect:hover .overlay {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
-
-.hovereffect img {
-  display: block;
-  position: relative;
-  -webkit-transition: all 0.35s;
-  transition: all 0.35s;
-  margin-bottom: 7px;
-}
-
-.hovereffect:hover img {
-  filter: brightness(0.2);
-  -webkit-filter: brightness(0.2);
-  -moz-filter: brightness(0.2);
-  -o-filter: brightness(0.2);
-  -ms-filter: brightness(0.2);
-}
-
-.hovereffect h4 {
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  font-size: 26px;
-  background-color: transparent;
-  color: #7e0a0af3;
-  /* margin-top: 2em; */
-  /* padding: 2em 2em; */
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-  letter-spacing: 2px;
-}
-
-.hovereffect p {
-  color: #FFF;
-  line-height: 1.8em;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
-}
-
-.hovereffect:hover p,
-.hovereffect:hover h4 {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.portfolio-wrap {
-  padding: 0 4px;
-}
-
-h2,
-p.desc {
+.desc p {
   padding-top: 10px;
-  padding-left: 30px;
+  color: white;
 }
 .reg{
-  background-color:rgb(196, 129, 43);
+  background-color:black;
 }
 
 div.modal-dialog {
-  min-width: 1000px;
-  min-height: 600px;
+  min-width: 500px;
+  min-height: 300px;
 }
 
 div.modal-content {
-  min-width: 800px;
-  min-height: 600px;
+  min-width: 500px;
+  min-height: 300px;
 }
 
 #about div.modal-dialog {
@@ -430,7 +321,9 @@ div.modal-content {
 }
 
 h5.modal-title {
-  margin-left: 160px;
+  margin-left: 50px;
+  color: red;
+  text-align: center;
 }
 
 /* End of Gallery styles */
